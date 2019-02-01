@@ -1,7 +1,7 @@
 export class Ingredient{
 
-    constructor(public name: string,public amount: number){}
-   /*  typeScript provide shortcut to get rid of below code
+    //constructor(public name: string,public amount: number){}
+    //typeScript provide shortcut to get rid of below code
    public name: string;
     public amount: number;
 
@@ -9,7 +9,7 @@ export class Ingredient{
         this.name=name,
         this.amount=amount
 
-    }*/
+    }
 
 
 }
