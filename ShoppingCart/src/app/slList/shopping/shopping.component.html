@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-edit></app-edit>
+  </div>
+</div>
+
+<hr>
+
+<ul class="list-group" *ngFor="let ing of ingridents" style="cursor: pointer">
+  <li class="list-group-item">
+    {{ing.name}}({{ing.amount}})
+  </li>
+</ul>

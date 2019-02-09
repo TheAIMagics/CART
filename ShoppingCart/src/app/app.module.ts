@@ -7,11 +7,13 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { RecipesListComponent } from './recipes/recipes-list/recipes-list.component';
 import { RecipesDetailComponent } from './recipes/recipes-detail/recipes-detail.component';
 import { RecipesItemComponent } from './recipes/recipes-list/recipes-item/recipes-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './Shopping-list/shopping-edit/shopping-edit.component';
+
+
 import { dropDown } from './shared/dropDown.directive';
 import { recipeService } from './recipes/recipe.service';
-import { ShoppingListService } from './shopping-list/shopping-list.service'
+import { ShoppingComponent } from './slList/shopping/shopping.component';
+import { EditComponent } from './slList/edit/edit.component';
+import { ShoppingService } from './slList/shopping.service';
 
 @NgModule({
   declarations: [
@@ -21,15 +23,15 @@ import { ShoppingListService } from './shopping-list/shopping-list.service'
     RecipesListComponent,
     RecipesDetailComponent,
     RecipesItemComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
-    dropDown
+    dropDown,
+    ShoppingComponent,
+    EditComponent
     
   ],
   imports: [
     BrowserModule
   ],
-  providers: [recipeService,ShoppingListService],
+  providers:[ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
