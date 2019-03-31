@@ -7,7 +7,7 @@ import { ShoppingService } from '../slList/shopping.service';
 
 export class recipeService{
 
-    recipeSelected = new EventEmitter<Recipe>();
+   
     
     recipes : Recipe[] = [
 
@@ -33,6 +33,10 @@ export class recipeService{
         return this.recipes.slice();
     }
 
+    getRecipe( index: number){
+        return this.recipes[index];
+    }
+    
     addIngridentstoShoppingList(ingrident : Ingredient[]){
         this.slservice.onIngridentsAddedFromShopping(ingrident);
     }
