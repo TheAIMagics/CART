@@ -26,6 +26,9 @@ export class ShoppingComponent implements OnInit ,OnDestroy{
       }
     );
   }
+  editItem( index : number ){
+    this.slservice.startedEditing.next(index);
+  }
 
   ngOnDestroy(){
     this.subscription.unsubscribe();// to prevent any memory leaks

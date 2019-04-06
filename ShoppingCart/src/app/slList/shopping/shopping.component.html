@@ -6,8 +6,8 @@
 
 <hr>
 
-<ul class="list-group" *ngFor="let ing of ingridents" style="cursor: pointer">
-  <li class="list-group-item">
+<ul class="list-group" *ngFor="let ing of ingridents; let i = index" style="cursor: pointer">
+  <li class="list-group-item" (click)="editItem(i)"> 
     {{ing.name}}({{ing.amount}})
   </li>
 </ul>
